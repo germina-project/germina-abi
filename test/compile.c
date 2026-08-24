@@ -1,17 +1,11 @@
 #include <germina/abi/version.h>
-#include <germina/abi/types.h>
-#include <germina/abi/memory.h>
+#include <germina/version.h>
 
 #include <stdint.h>
 
-int main(void)
-{
-    GAbiVersion version = {
-        .major = GERMINA_ABI_VERSION_MAJOR,
-        .minor = GERMINA_ABI_VERSION_MINOR,
-        .patch = GERMINA_ABI_VERSION_PATCH,
-        .revision = GERMINA_ABI_VERSION_REVISION
-    };
+int main(void) {
+    GVersion version = {
+        .major = GERMINA_ABI_VERSION_MAJOR, .minor = GERMINA_ABI_VERSION_MINOR, .patch = GERMINA_ABI_VERSION_PATCH, .revision = GERMINA_ABI_VERSION_REVISION};
 
     if (version.major != GERMINA_ABI_VERSION_MAJOR)
         return 1;
