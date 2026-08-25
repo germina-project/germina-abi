@@ -52,7 +52,7 @@ They must be usable by:
 
 ABI headers must not include:
 
-- Core implementation headers
+- Host implementation headers
 - Runtime implementation headers
 - Compiler headers
 - MLIR headers
@@ -130,7 +130,7 @@ The ABI depends on nothing from Germina.
 Consumers depend on the ABI:
 
     Compiler ──┐
-    Core ──────┼──> ABI
+    Host ──────┼──> ABI
     Runtime ───┘
 
 Never introduce the reverse dependency.
